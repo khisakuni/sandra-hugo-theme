@@ -1,0 +1,142 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ .Title }}</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="https://sandra.imgix.net/images/favicon2.ico">
+{{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+
+<style>
+  html, body {
+    min-height: 100vh;
+  }
+
+  header {
+    background-color: #ebebd2;
+  }
+
+  h1, h2, h3, strong {
+    font-family: 'PT Serif', serif;
+  }
+
+  .content blockquote {
+    background-color: #ffffff;
+    border-left: none;
+  }
+
+  .navbar {
+    background-color: #ebebd2;
+  }
+  .navbar a {
+    text-transform: uppercase;
+    font-family: 'PT Serif', serif;
+    padding: 0 20px;
+    font-weight: 700; 
+  }
+  .navbar a:hover {
+    background-color: transparent;
+    color: #4a4a4a;
+    text-decoration: underline;
+  }
+
+  .navbar-start {
+    margin: auto;
+  }
+
+  .color-section {
+    background-color: #ebebd2;
+  }
+
+  img.lazy {
+    opacity: 0;
+  }
+
+  img.loaded {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  .hero-section {
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url("https://sandra.imgix.net/images/Mom_Green_Background_2.jpg?q=50");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: 80%;
+    color: #ebebd2;
+  }
+
+  .hero-section h1 {
+    color: #ebebd2;
+  }
+
+  .hero-section h3 {
+    color: #ebebd2;
+  }
+
+  .hero-section h2 {
+    padding: 10px;
+    background-color: #ebebd2;
+  }
+
+  .hero-description {
+    min-height: 80%;
+    display: flex;
+  }
+
+  .hero-description.is-hidden-tablet {
+    align-items: flex-end;
+  }
+
+  /*div.mce_inline_error {*/
+  /*  display: none !important;*/
+  /*}*/
+
+  /*input.mce_inline_error#mce-EMAIL {*/
+
+  /*}*/
+  .mce_inline_error.help.is-danger {
+    background-color: transparent !important;
+    margin: .25rem 0 0 0 !important;
+    color: #f14668 !important;
+    padding: 0 !important;
+    font-weight: normal !important;
+  }
+
+  button.button, a.button {
+    background-color: #4a4a4a;
+    border: 1px solid #4a4a4a;
+    color: #ebebd2;
+  }
+
+  button.button:hover, a.button:hover {
+    background-color: #4a4a4a;
+    background-color: transparent;
+    color: #4a4a4a;
+  }
+
+  .mc-contact {
+    width: 100%;
+    min-height: 760px;
+  }
+
+  .tag.tag-key {
+    background-color: #ebebd2;
+    border: 2px solid #fafafa;
+  }
+
+  .tag.tag-value {
+    background-color: #fafafa;
+  }
+
+</style>
+

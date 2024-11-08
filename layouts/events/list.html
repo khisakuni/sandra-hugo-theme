@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section class="section color-section">
+    <div class="columns">
+        <div class="column">
+            <h1 class="title is-size-1 has-text-centered">Events</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    {{ range .Pages.Reverse }}
+      {{ $day := time.ParseDuration "-24h" }}
+      {{ $yesterday := time.Now.Add $day }}
+      {{ if and (.Date.After $yesterday) (not .Draft)   }}
+      <div class="container block">
+          <h2 class="title is-size-2">{{ .Title }}</h2>
+          <h5 class="is-size-5">{{ .Date.Format "January 2, 2006" }}</h5>
+          <div class="content">
+              {{ .Content }}
+          </div>
+      </div>
+      {{ end }}
+    {{ end }}
+</section>
+{{ end }}

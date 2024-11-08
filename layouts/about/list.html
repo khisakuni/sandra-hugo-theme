@@ -1,0 +1,99 @@
+{{ define "main" }}
+<section class="section color-section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <h1 class="title is-size-1 has-text-centered">{{ .Params.Top.Title }}</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section color-section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-7">
+                <h2 class="title is-size-2">{{ .Params.Story.title }}</h2>
+                <p>{{ .Params.Story.p1 }}</p>
+
+                <br>
+                <p>{{ .Params.Story.p2 }}</p>
+
+                <br>
+                <p>{{ .Params.Story.p3 }}</p>
+            </div>
+
+            <div class="column is-3 is-offset-1">
+                <figure class="image">
+                    {{ partial "image/lazy.html" (dict "Ctx" . "Class" "" "Width" 300 "Height" 500 "Src" "https://sandra.imgix.net/images/Sandra_Sofia_Young_Cropped.png?auto=format&w=300&q=50") }}
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half">
+                <h2 class="title is-size-2 has-text-centered">Sandra</h2>
+                <div class="columns is-centered">
+                    <div class="column is-half">
+                        <figure class="image is-1by1">
+                            {{ partial "image/lazy.html" (dict "Ctx" . "Class" "is-rounded" "Width" 300 "Height" 300 "Src" "https://sandra.imgix.net/images/Mom_Green_Background_1.jpg?auto=format&ar=1:1&fit=crop&q=50") }}
+                        </figure>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-10">
+                        <div class="content block">
+                            <p>{{ .Params.Sandra.Bio }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <h2 class="title is-size-2 has-text-centered">Sofia</h2>
+                <div class="columns is-centered">
+                    <div class="column is-half">
+                        <figure class="image">
+                            {{ partial "image/lazy.html" (dict "Ctx" . "Class" "is-rounded" "Width" 300 "Height" 300 "Src" "https://sandra.imgix.net/images/Sofia_Hisakuni_Headshot.jpeg?auto=format&ar=1:1&fit=crop&q=50") }}
+                        </figure>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-10">
+                        <div class="content block">
+                            <p>
+                                Sofia Hisakuni has always had a passion for expressing her creativity through art, drawing, and design.
+                                She currently works in marketing, enjoys spending time outdoors, and visiting her mom.
+                                She lives in Los Angeles, California. Contact her at <a href="mailto:sofiahisakuni@gmail.com">sofiahisakuni@gmail.com</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section color-section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-one-fifth is-offset-two-fifths">
+                <figure class="image is-1by1">
+                    {{ partial "image/lazy.html" (dict "Ctx" . "Class" "is-rounded" "Width" 300 "Height" 300 "Src" "https://sandra.imgix.net/images/Sandra_Sofia_Together.jpg?auto=format&ar=1:1&fit=crop&q=50") }}
+                </figure>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-half is-centered is-offset-one-quarter">
+                <strong class="has-text-centered">{{ .Params.Top.Content  }}</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,146 @@
+{{ define "main" }}
+<section class="section hero-section">
+    <div class="container content">
+        <h1 class="title is-size-1 has-text-centered">{{ .Params.Top.Title }}</h1>
+        <h3 class="subtitle has-text-centered">Writer | Poet | Teacher</h3>
+    </div>
+    <div class="container is-vcentered hero-description is-hidden-mobile">
+        <div class="columns is-vcentered">
+            <div class="column is-two-fifths">
+                <h2 class="title is-size-2">{{ .Params.Hero.Title }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container is-vcentered hero-description is-hidden-tablet">
+        <div class="columns is-vcentered">
+            <div class="column is-two-fifths">
+                <h2 class="title is-size-2">{{ .Params.Hero.Title }}</h2>
+                <div class="block">
+                    <h3 class="subtitle">{{ .Params.Hero.Subtitle }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section color-section">
+    <div class="columns is-vcentered">
+        <div class="column">
+            <div class="columns is-centered is-mobile">
+                <div class="column m-5">
+                    <figure class="image">
+                        {{ partial "image/lazy.html" (dict "Ctx" . "Class" "is-4by5" "Width" 430 "Height" 540 "Src" "https://sandra.imgix.net/images/Cover_High_Res.jpg") }}
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="m-3">
+                <a href="/books"><h2 class="title">{{ .Params.Book.Title }}</h2></a>
+                <h3 class="subtitle">{{ .Params.Book.Subtitle }}</h3>
+                <div class="block">
+                    <div>
+                        <em>Written by Sandra Hisakuni</em>
+                    </div>
+                    <div>
+                        <em>Illustrated by Sofia Hisakuni</em>
+                    </div>
+                </div>
+                <div class="block has-text-centered">
+                    {{ range .Params.Book.haiku}}
+                    <p><strong>{{ . }}</strong><p>
+                    {{ end }}
+                </div>
+                <div class="block">
+                    {{ range .Params.Book.Description }}
+                    <p class="block">
+                        {{ . }}
+                    </p>
+                    {{ end }}
+                </div>
+                <div class="block is-centered has-text-centered">
+                    <div>
+                        <a class="button is-fullwidth" href="https://itascabooks.com/products/the-northland-beckons-an-illustrated-haiku-journey" target="blank">Order Now</a>
+                        <a href="/books.html#available-stores">Or find in a bookstore near you</a>
+                    </div>
+                </div>
+                <div class="field is-grouped is-grouped-multiline">
+                    {{ range .Params.Book.Tags }}
+                    <div class="control">
+                        <div class="tags has-addons">
+                          <span class="tag tag-key">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas"></i>
+                                <ion-icon name="{{ .icon }}-outline"></ion-icon>
+                              </span>
+                              <span>{{ .key }}</span>
+                            </span>
+                          </span>
+                          <span class="tag tag-value">{{ .value }}</span>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="block">
+                    <a href="{{ .Params.Book.lesson_plan }}" target="blank">Lesson plan</a> | <a href="{{ .Params.Book.press_kit }}" target="blank">Press kit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="columns">
+        <div class="column is-centered has-text-centered">
+            {{ partial "image/lazy.html" (dict "Ctx" . "Class" "" "Width" 100 "Height" 100 "Src" "https://sandra.imgix.net/images/readers-favorite-high-res.png") }}
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column">
+            <div class="content">
+                <blockquote>
+                    <i>"Sandra and Sofia love the wilderness, and that love shines through the writing and illustrations. I cannot recommend this book highly enough; if I could give the book a six-star rating, I would."</i>
+                    <div class="is-flex is-justify-content-flex-end">
+                        &mdash; Philip Van Heusen, &nbsp;<a href="https://readersfavorite.com/book-review/the-northland-beckons" target="blank">Readers' Favorite</a>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <blockquote>
+                    <i>"The rhythm runs like silk over your ears as it is read aloud and delivered in a peaceful atmosphere. The tranquility in the lines will ease children…adults will enjoy the depictions of wildlife and the visions the words conjure."</i>
+                    <div class="is-flex is-justify-content-flex-end">
+                        &mdash; Courtnee Turner Hoyle, &nbsp;<a href="https://readersfavorite.com/book-review/the-northland-beckons" target="blank">Readers' Favorite</a>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column">
+            <div class="content">
+                <blockquote>
+                    <i>"This anthology of poems captures a journey from beginning to end while showing how helpful poetry, particularly Japanese Haiku, can be as a literary device. This would make an excellent teaching tool for young and older students."</i>
+                    <div class="is-flex is-justify-content-flex-end">
+                        &mdash; Delene Vrey, &nbsp;<a href="https://readersfavorite.com/book-review/the-northland-beckons" target="blank">Readers' Favorite</a>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <blockquote>
+                    <i>"Sandra’s use of poetry to describe the BWCA is captivating and Sofia’s illustrations are authentic and heartwarming. A smiling frog never looked so good."</i>
+                    <div class="is-flex is-justify-content-flex-end">
+                        &mdash; Joe Friedrichs, &nbsp;<a href="https://paddleandportage.com/2024/03/26/new-haiku-book-shares-poetry-of-the-boundary-waters/" target="blank">Paddle & Portage</a>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}
