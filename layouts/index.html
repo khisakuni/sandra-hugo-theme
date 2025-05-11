@@ -1,13 +1,13 @@
 {{ define "main" }}
 <section class="section hero-section">
     <div class="container content">
-        <h1 class="title is-size-1 has-text-centered">{{ .Params.Top.Title }}</h1>
+        <h1 class="title is-size-1 has-text-centered">Sandra Hisakuni</h1>
         <h3 class="subtitle has-text-centered">Writer | Poet | Teacher</h3>
     </div>
     <div class="container is-vcentered hero-description is-hidden-mobile">
         <div class="columns is-vcentered">
             <div class="column is-two-fifths">
-                <h2 class="title is-size-2">{{ .Params.Hero.Title }}</h2>
+                <h2 class="title is-size-2">Celebrating beauty in the wilderness and everyday living.</h2>
             </div>
         </div>
     </div>
@@ -15,9 +15,9 @@
     <div class="container is-vcentered hero-description is-hidden-tablet">
         <div class="columns is-vcentered">
             <div class="column is-two-fifths">
-                <h2 class="title is-size-2">{{ .Params.Hero.Title }}</h2>
+                <h2 class="title is-size-2">Sandra Hisakuni</h2>
                 <div class="block">
-                    <h3 class="subtitle">{{ .Params.Hero.Subtitle }}</h3>
+                    <h3 class="subtitle">Celebrating beauty in the wilderness and everyday living.</h3>
                 </div>
             </div>
         </div>
@@ -37,8 +37,8 @@
         </div>
         <div class="column">
             <div class="m-3">
-                <a href="/books"><h2 class="title">{{ .Params.Book.Title }}</h2></a>
-                <h3 class="subtitle">{{ .Params.Book.Subtitle }}</h3>
+                <a href="/books"><h2 class="title">The Northland Beckons</h2></a>
+                <h3 class="subtitle">An Illustrated Haiku Journey</h3>
                 <div class="block">
                     <div>
                         <em>Written by Sandra Hisakuni</em>
@@ -48,16 +48,17 @@
                     </div>
                 </div>
                 <div class="block has-text-centered">
-                    {{ range .Params.Book.haiku}}
-                    <p><strong>{{ . }}</strong><p>
-                    {{ end }}
+                    <p><strong>The Northland Beckons</strong><p>
+                    <p><strong>Breathe, paddle, wander, observe</strong><p>
+                    <p><strong>Much will be revealed</strong><p>
                 </div>
                 <div class="block">
-                    {{ range .Params.Book.Description }}
                     <p class="block">
-                        {{ . }}
+                        Journey to the beautiful Boundary Waters of Minnesota and Canada. This sweet collection of haiku poetry allows readers to explore nature and meet the animals who call this treasured wilderness home.
                     </p>
-                    {{ end }}
+                    <p class="block">
+                        In our busy, tech-filled lives, author and illustrator, mother-daughter team Sandra and Sofia Hisakuni, invite you to slow down and explore the wonders of nature through the ancient art of haiku. They draw upon their extensive experience of living in Japan and camping through the canoe country of Northern Minnesota and Canada. Through creative haiku, vibrant illustrations and author commentary, readers learn of this treasured land. For those who are familiar with the Northlands canoe country, it is a reminder to come home to our shared wilderness.
+                    </p>
                 </div>
                 <div class="block is-centered has-text-centered">
                     <div>
@@ -84,7 +85,7 @@
                     {{ end }}
                 </div>
                 <div class="block">
-                    <a href="{{ .Params.Book.lesson_plan }}" target="blank">Lesson plan</a> | <a href="{{ .Params.Book.press_kit }}" target="blank">Press kit</a>
+                    <a href="https://sandra.imgix.net/resources/A%20Teacher's%20Guide%20to%20The%20Northland%20Beckons.pdf" target="blank">Lesson plan</a> | <a href="https://sandra.imgix.net/resources/northland-beckons-presskit.pdf" target="blank">Press kit</a>
                 </div>
             </div>
         </div>
@@ -95,6 +96,9 @@
     <div class="columns">
         <div class="column is-centered has-text-centered">
             {{ partial "image/lazy.html" (dict "Ctx" . "Class" "" "Width" 100 "Height" 100 "Src" "https://sandra.imgix.net/images/readers-favorite-high-res.png") }}
+        </div>
+        <div class="column is-centered has-text-centered">
+            {{ partial "image/lazy.html" (dict "Ctx" . "Class" "" "Width" 100 "Height" 100 "Src" "https://sandra.imgix.net/images/silver_moonbeam_medal.png") }}
         </div>
     </div>
     <div class="columns">
