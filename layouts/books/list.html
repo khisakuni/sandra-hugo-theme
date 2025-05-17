@@ -4,7 +4,7 @@
     <div class="container">
         <div class="columns">
             <div class="column">
-                <h1 class="title is-size-1 has-text-centered">{{ .Params.PageTitle }}</h1>
+                <h1 class="title is-size-1 has-text-centered">Books</h1>
             </div>
         </div>
     </div>
@@ -28,23 +28,14 @@
                 <h3 class="subtitle">{{ .Params.Subtitle }}</h3>
                 <div class="block">
                     <div>
-                        <em>Written by Sandra Hisakuni</em>
+                        <em>Written by {{ .Author }}</em>
                     </div>
                     <div>
-                        <em>Illustrated by Sofia Hisakuni</em>
+                        <em>Illustrated by {{ .Illustrator }}</em>
                     </div>
                 </div>
-                <div class="block has-text-centered">
-                    {{ range .Params.Haiku}}
-                    <p><strong>{{ . }}</strong><p>
-                    {{ end }}
-                </div>
                 <div class="block">
-                    {{ range .Params.Desc }}
-                    <p class="block">
-                        {{ . }}
-                    </p>
-                    {{ end }}
+                    {{ .Content }}
                 </div>
                 <div class="block is-centered has-text-centered">
                     <div>
@@ -129,7 +120,7 @@
             <div class="content">
                 <ul>
                     {{ range .Params.Stores }}
-                        <li><a href="{{ .website }}" target="blank">{{ .name }}</a> &mdash; {{ .location }}</li>
+                        <li><a href="{{ .Website }}" target="blank">{{ .Name }}</a> &mdash; {{ .Location }}</li>
                     {{ end }}
                 </ul>
             </div>
@@ -138,8 +129,8 @@
             <h3 class="title is-3 subtitle">Online</h3>
             <div class="content">
                 <ul>
-                    {{ range .Params.Websites }}
-                        <li><a href="{{ .website }}" target="blank">{{ .name }}</a></li>
+                    {{ range .Params.OnlineStores }}
+                        <li><a href="{{ .Website }}" target="blank">{{ .Name }}</a></li>
                     {{ end }}
                 </ul>
             </div>
