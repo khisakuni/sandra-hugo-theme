@@ -102,48 +102,18 @@
         </div>
     </div>
     <div class="columns">
+        {{ range .reviews }}
         <div class="column">
             <div class="content">
                 <blockquote>
-                    <i>"Sandra and Sofia love the wilderness, and that love shines through the writing and illustrations. I cannot recommend this book highly enough; if I could give the book a six-star rating, I would."</i>
+                    <i>"{{ .review }}"</i>
                     <div class="is-flex is-justify-content-flex-end">
-                        &mdash; Philip Van Heusen, &nbsp;<a href="https://readersfavorite.com/book-review/the-northland-beckons" target="blank">Readers' Favorite</a>
+                        &mdash; {{ .Name }}, &nbsp; {{ .source | markdownify }}
                     </div>
                 </blockquote>
             </div>
         </div>
-        <div class="column">
-            <div class="content">
-                <blockquote>
-                    <i>"The rhythm runs like silk over your ears as it is read aloud and delivered in a peaceful atmosphere. The tranquility in the lines will ease children…adults will enjoy the depictions of wildlife and the visions the words conjure."</i>
-                    <div class="is-flex is-justify-content-flex-end">
-                        &mdash; Courtnee Turner Hoyle, &nbsp;<a href="https://readersfavorite.com/book-review/the-northland-beckons" target="blank">Readers' Favorite</a>
-                    </div>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-    <div class="columns">
-        <div class="column">
-            <div class="content">
-                <blockquote>
-                    <i>"This anthology of poems captures a journey from beginning to end while showing how helpful poetry, particularly Japanese Haiku, can be as a literary device. This would make an excellent teaching tool for young and older students."</i>
-                    <div class="is-flex is-justify-content-flex-end">
-                        &mdash; Delene Vrey, &nbsp;<a href="https://readersfavorite.com/book-review/the-northland-beckons" target="blank">Readers' Favorite</a>
-                    </div>
-                </blockquote>
-            </div>
-        </div>
-        <div class="column">
-            <div class="content">
-                <blockquote>
-                    <i>"Sandra’s use of poetry to describe the BWCA is captivating and Sofia’s illustrations are authentic and heartwarming. A smiling frog never looked so good."</i>
-                    <div class="is-flex is-justify-content-flex-end">
-                        &mdash; Joe Friedrichs, &nbsp;<a href="https://paddleandportage.com/2024/03/26/new-haiku-book-shares-poetry-of-the-boundary-waters/" target="blank">Paddle & Portage</a>
-                    </div>
-                </blockquote>
-            </div>
-        </div>
+        {{ end }}
     </div>
 </section>
 
