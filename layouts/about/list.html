@@ -15,13 +15,9 @@
         <div class="columns">
             <div class="column is-7">
                 <h2 class="title is-size-2">{{ .Params.Story.title }}</h2>
-                <p>{{ .Params.Story.p1 }}</p>
 
-                <br>
-                <p>{{ .Params.Story.p2 }}</p>
+                {{ .Content }}
 
-                <br>
-                <p>{{ .Params.Story.p3 }}</p>
             </div>
 
             <div class="column is-3 is-offset-1">
@@ -48,7 +44,7 @@
                 <div class="columns is-centered">
                     <div class="column is-10">
                         <div class="content block">
-                            <p>{{ .Params.Sandra.Bio }}</p>
+                            <p>{{ .Params.sandra_bio }}</p>
                         </div>
                     </div>
                 </div>
@@ -66,11 +62,7 @@
                 <div class="columns is-centered">
                     <div class="column is-10">
                         <div class="content block">
-                            <p>
-                                Sofia Hisakuni has always had a passion for expressing her creativity through art, drawing, and design.
-                                She currently works in marketing, enjoys spending time outdoors, and visiting her mom.
-                                She lives in Los Angeles, California. Contact her at <a href="mailto:sofiahisakuni@gmail.com">sofiahisakuni@gmail.com</a>.
-                            </p>
+                            <p>{{ .Params.sofia_bio }}</p>
                         </div>
                     </div>
                 </div>
@@ -90,7 +82,7 @@
         </div>
         <div class="columns">
             <div class="column is-half is-centered is-offset-one-quarter">
-                <strong class="has-text-centered">{{ .Params.Top.Content  }}</strong>
+                <strong class="has-text-centered">{{ .Params.bottom_content  }}</strong>
             </div>
         </div>
     </div>
