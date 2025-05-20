@@ -75,39 +75,23 @@
         <div class="column is-centered has-text-centered">
             {{ partial "image/lazy.html" (dict "Ctx" . "Class" "" "Width" 100 "Height" 100 "Src" "https://sandra.imgix.net/images/readers-favorite-high-res.png") }}
         </div>
+        <div class="column is-centered has-text-centered">
+            {{ partial "image/lazy.html" (dict "Ctx" . "Class" "" "Width" 100 "Height" 100 "Src" "https://sandra.imgix.net/images/silver_moonbeam_medal.png") }}
+        </div>
     </div>
     <div class="columns">
+        {{ range .reviews }}
         <div class="column">
             <div class="content">
                 <blockquote>
-                    <i>"Sandra and Sofia love the wilderness, and that love shines through the writing and illustrations. I cannot recommend this book highly enough; if I could give the book a six-star rating, I would."</i>
+                    <i>"{{ .review }}"</i>
                     <div class="is-flex is-justify-content-flex-end">
-                        &mdash; Philip Van Heusen, &nbsp;<a href="https://readersfavorite.com/book-review/the-northland-beckons" target="blank">Readers' Favorite</a>
+                        &mdash; {{ .Name }}, &nbsp; {{ .source | markdownify }}
                     </div>
                 </blockquote>
             </div>
         </div>
-        <div class="column">
-            <div class="content">
-                <blockquote>
-                    <i>"This anthology of poems captures a journey from beginning to end while showing how helpful poetry, particularly Japanese Haiku, can be as a literary device. This would make an excellent teaching tool for young and older students."</i>
-                    <div class="is-flex is-justify-content-flex-end">
-                        &mdash; Courtnee Turner Hoyle, &nbsp;<a href="https://readersfavorite.com/book-review/the-northland-beckons" target="blank">Readers' Favorite</a>
-                    </div>
-                </blockquote>
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="content">
-                <blockquote>
-                    <i>"This anthology of poems captures a journey from beginning to end while showing how helpful poetry, particularly Japanese Haiku, can be as a literary device. This would make an excellent teaching tool for young and older students."</i>
-                    <div class="is-flex is-justify-content-flex-end">
-                        &mdash; Delene Vrey, &nbsp;<a href="https://readersfavorite.com/book-review/the-northland-beckons" target="blank">Readers' Favorite</a>
-                    </div>
-                </blockquote>
-            </div>
-        </div>
+        {{ end }}
     </div>
 </section>
 
