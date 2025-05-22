@@ -17,7 +17,7 @@
             <div class="columns is-centered is-mobile">
                 <div class="column m-5">
                     <figure class="image">
-                        {{ partial "image/lazy.html" (dict "Ctx" . "Class" "is-4by5" "Width" 430 "Height" 540 "Src" .Params.Image) }}
+                        {{ partial "image/lazy.html" (dict "Ctx" . "Class" "is-4by5" "Width" 430 "Height" 540 "Src" (index .Params.Image 0)) }}
                     </figure>
                 </div>
             </div>
