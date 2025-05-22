@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="field is-grouped is-grouped-multiline">
-                    {{ range .Params.Tags }}
+                    {{ range .Params.northland_beckons_tags }}
                     <div class="control">
                         <div class="tags has-addons">
                           <span class="tag tag-key">
@@ -63,7 +63,7 @@
                     {{ end }}
                 </div>
                 <div class="block">
-                    <a href="{{ .Params.lesson_plan }}" target="blank">Lesson plan</a> | <a href="{{ .Params.press_kit }}" target="blank">Press kit</a>
+                    <a href="{{ index .Params.files.lesson_plan.Files 0 }}" target="blank">Lesson plan</a> | <a href="{{ index .Params.files.press_kit.Files 0 }}" target="blank">Press kit</a>
                 </div>
             </div>
         </div>

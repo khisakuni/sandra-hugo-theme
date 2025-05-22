@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="field is-grouped is-grouped-multiline">
-                    {{ range .Params.Book_Tags }}
+                    {{ range .Params.northland_beckons_tags }}
                     <div class="control">
                         <div class="tags has-addons">
                           <span class="tag tag-key">
@@ -85,7 +85,7 @@
                     {{ end }}
                 </div>
                 <div class="block">
-                    <a href="https://sandra.imgix.net/resources/A%20Teacher's%20Guide%20to%20The%20Northland%20Beckons.pdf" target="blank">Lesson plan</a> | <a href="https://sandra.imgix.net/resources/northland-beckons-presskit.pdf" target="blank">Press kit</a>
+                    <a href="{{ index .Params.files.lesson_plan.Files 0 }}" target="blank">Lesson plan</a> | <a href="{{ index .Params.files.press_kit.Files 0 }}" target="blank">Press kit</a>
                 </div>
             </div>
         </div>
