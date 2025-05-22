@@ -44,7 +44,7 @@
                 <div class="columns is-centered">
                     <div class="column is-10">
                         <div class="content block">
-                            <p>{{ .Params.sandra_bio | markdownify }}</p>
+                            <p>{{ .Params.content.sandra_bio.Text | markdownify }}</p>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <div class="columns is-centered">
                     <div class="column is-10">
                         <div class="content block">
-                            <p>{{ .Params.sofia_bio | markdownify }}</p>
+                            <p>{{ .Params.content.sofia_bio.Text | markdownify }}</p>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
         </div>
         <div class="columns">
             <div class="column is-half is-centered is-offset-one-quarter">
-                <strong class="has-text-centered">{{ .Params.bottom_content | markdownify  }}</strong>
+                <strong class="has-text-centered">{{ .Params.content.bottom.Text | markdownify  }}</strong>
             </div>
         </div>
     </div>
