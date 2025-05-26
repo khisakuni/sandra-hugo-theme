@@ -15,7 +15,7 @@
         </a>
         <h5 class="is-size-5">{{ .Date.Format "January 2, 2006" }}</h5>
         <div class="block">
-            <p>{{ .Description }}</p>
+            <p>{{ .Description | markdownify }}</p>
 
             <a href="{{ .RelPermalink }}">Read more</a>
         </div>
