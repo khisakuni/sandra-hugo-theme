@@ -1,120 +1,137 @@
 {{ define "main" }}
 <section class="section hero-section">
-    <div class="container content">
-        <h1 class="title is-size-1 has-text-centered">Sandra Hisakuni</h1>
-        <h3 class="subtitle has-text-centered">Writer | Poet | Teacher</h3>
+  <div class="container content">
+    <h1 class="title is-size-1 has-text-centered">Sandra Hisakuni</h1>
+    <h3 class="subtitle has-text-centered">Writer | Poet | Teacher</h3>
+  </div>
+  <div class="container is-vcentered hero-description is-hidden-mobile">
+    <div class="columns is-vcentered">
+      <div class="column is-two-fifths">
+        <h2 class="title is-size-2">Celebrating beauty in the wilderness and everyday living.</h2>
+      </div>
     </div>
-    <div class="container is-vcentered hero-description is-hidden-mobile">
-        <div class="columns is-vcentered">
-            <div class="column is-two-fifths">
-                <h2 class="title is-size-2">Celebrating beauty in the wilderness and everyday living.</h2>
-            </div>
-        </div>
-    </div>
+  </div>
 
-    <div class="container is-vcentered hero-description is-hidden-tablet">
-        <div class="columns is-vcentered">
-            <div class="column is-two-fifths">
-                <h2 class="title is-size-2">Sandra Hisakuni</h2>
-                <div class="block">
-                    <h3 class="subtitle">Celebrating beauty in the wilderness and everyday living.</h3>
-                </div>
-            </div>
+  <div class="container is-vcentered hero-description is-hidden-tablet">
+    <div class="columns is-vcentered">
+      <div class="column is-two-fifths">
+        <h2 class="title is-size-2">Sandra Hisakuni</h2>
+        <div class="block">
+          <h3 class="subtitle">Celebrating beauty in the wilderness and everyday living.</h3>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="section color-section">
-    <div class="columns is-vcentered">
-        <div class="column">
-            <div class="columns is-centered is-mobile">
-                <div class="column m-5">
-                    <figure class="image">
-                        {{ partial "image/lazy.html" (dict "Ctx" . "Class" "is-4by5" "Width" 430 "Height" 540 "Src" "https://sandra.imgix.net/images/Cover_High_Res.jpg") }}
-                    </figure>
-                </div>
-            </div>
+  <div class="columns is-vcentered">
+    <div class="column">
+      <div class="columns is-centered is-mobile">
+        <div class="column m-5">
+          <figure class="image">
+            {{ partial "image/lazy.html" (dict "Ctx" . "Class" "is-4by5" "Width" 430 "Height" 540 "Src"
+            "https://sandra.imgix.net/images/Cover_High_Res.jpg") }}
+          </figure>
         </div>
-        <div class="column">
-            <div class="m-3">
-                <a href="/books"><h2 class="title">The Northland Beckons</h2></a>
-                <h3 class="subtitle">An Illustrated Haiku Journey</h3>
-                <div class="block">
-                    <div>
-                        <em>Written by Sandra Hisakuni</em>
-                    </div>
-                    <div>
-                        <em>Illustrated by Sofia Hisakuni</em>
-                    </div>
-                </div>
-                <div class="block has-text-centered">
-                    <p><strong>The Northland Beckons</strong><p>
-                    <p><strong>Breathe, paddle, wander, observe</strong><p>
-                    <p><strong>Much will be revealed</strong><p>
-                </div>
-                <div class="block">
-                    <p class="block">
-                        Journey to the beautiful Boundary Waters of Minnesota and Canada. This sweet collection of haiku poetry allows readers to explore nature and meet the animals who call this treasured wilderness home.
-                    </p>
-                    <p class="block">
-                        In our busy, tech-filled lives, author and illustrator, mother-daughter team Sandra and Sofia Hisakuni, invite you to slow down and explore the wonders of nature through the ancient art of haiku. They draw upon their extensive experience of living in Japan and camping through the canoe country of Northern Minnesota and Canada. Through creative haiku, vibrant illustrations and author commentary, readers learn of this treasured land. For those who are familiar with the Northlands canoe country, it is a reminder to come home to our shared wilderness.
-                    </p>
-                </div>
-                <div class="block is-centered has-text-centered">
-                    <div>
-                        <a class="button is-fullwidth" href="https://itascabooks.com/products/the-northland-beckons-an-illustrated-haiku-journey" target="blank">Order Now</a>
-                        <a href="/books.html#available-stores">Or find in a bookstore near you</a>
-                    </div>
-                </div>
-                <div class="field is-grouped is-grouped-multiline">
-                    {{ range .Params.northland_beckons_tags }}
-                    <div class="control">
-                        <div class="tags has-addons">
-                          <span class="tag tag-key">
-                            <span class="icon-text">
-                              <span class="icon">
-                                <i class="fas"></i>
-                                <ion-icon name="{{ .icon }}-outline"></ion-icon>
-                              </span>
-                              <span>{{ .key }}</span>
-                            </span>
-                          </span>
-                          <span class="tag tag-value">{{ .value }}</span>
-                        </div>
-                    </div>
-                    {{ end }}
-                </div>
-                <div class="block">
-                    <a href="{{ index .Params.files.lesson_plan.Files 0 }}" target="blank">Lesson plan</a> | <a href="{{ index .Params.files.press_kit.Files 0 }}" target="blank">Press kit</a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="column">
+      <div class="m-3">
+        <a href="/books">
+          <h2 class="title">The Northland Beckons</h2>
+        </a>
+        <h3 class="subtitle">An Illustrated Haiku Journey</h3>
+        <div class="block">
+          <div>
+            <em>Written by Sandra Hisakuni</em>
+          </div>
+          <div>
+            <em>Illustrated by Sofia Hisakuni</em>
+          </div>
+        </div>
+        <div class="block has-text-centered">
+          <p><strong>The Northland Beckons</strong>
+          <p>
+          <p><strong>Breathe, paddle, wander, observe</strong>
+          <p>
+          <p><strong>Much will be revealed</strong>
+          <p>
+        </div>
+        <div class="block">
+          <p class="block">
+            Journey to the beautiful Boundary Waters of Minnesota and Canada. This sweet collection of haiku poetry
+            allows readers to explore nature and meet the animals who call this treasured wilderness home.
+          </p>
+          <p class="block">
+            In our busy, tech-filled lives, author and illustrator, mother-daughter team Sandra and Sofia Hisakuni,
+            invite you to slow down and explore the wonders of nature through the ancient art of haiku. They draw upon
+            their extensive experience of living in Japan and camping through the canoe country of Northern Minnesota
+            and Canada. Through creative haiku, vibrant illustrations and author commentary, readers learn of this
+            treasured land. For those who are familiar with the Northlands canoe country, it is a reminder to come home
+            to our shared wilderness.
+          </p>
+        </div>
+        <div class="block is-centered has-text-centered">
+          <div>
+            <a class="button is-fullwidth"
+              href="https://itascabooks.com/products/the-northland-beckons-an-illustrated-haiku-journey"
+              target="blank">Order Now</a>
+            <a href="/books#available-stores">Or find in a bookstore near you</a>
+          </div>
+        </div>
+        <div class="field is-grouped is-grouped-multiline">
+          {{ range .Params.northland_beckons_tags }}
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag tag-key">
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fas"></i>
+                    <ion-icon name="{{ .icon }}-outline"></ion-icon>
+                  </span>
+                  <span>{{ .key }}</span>
+                </span>
+              </span>
+              <span class="tag tag-value">{{ .value }}</span>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+        <div class="block">
+          <a href="{{ index .Params.files.lesson_plan.Files 0 }}" target="blank">Lesson plan</a> | <a
+            href="{{ index .Params.files.press_kit.Files 0 }}" target="blank">Press kit</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section">
-    <div class="columns">
-        <div class="column is-centered has-text-centered">
-            {{ partial "image/lazy.html" (dict "Ctx" . "Class" "" "Width" 100 "Height" 100 "Src" "https://sandra.imgix.net/images/readers-favorite-high-res.png") }}
-        </div>
-        <div class="column is-centered has-text-centered">
-            {{ partial "image/lazy.html" (dict "Ctx" . "Class" "" "Width" 100 "Height" 100 "Src" "https://sandra.imgix.net/images/silver_moonbeam_medal.png") }}
-        </div>
+  <div class="columns">
+    <div class="column is-centered has-text-centered">
+      {{ partial "image/lazy.html" (dict "Ctx" . "Class" "" "Width" 100 "Height" 100 "Src"
+      "https://sandra.imgix.net/images/readers-favorite-high-res.png") }}
     </div>
-    <div class="columns">
-        {{ range .Params.reviews }}
-        <div class="column">
-            <div class="content">
-                <blockquote>
-                    <i>"{{ .review }}"</i>
-                    <div class="is-flex is-justify-content-flex-end">
-                        &mdash; {{ .Name }}, &nbsp; {{ .source | markdownify }}
-                    </div>
-                </blockquote>
-            </div>
-        </div>
-        {{ end }}
+    <div class="column is-centered has-text-centered">
+      {{ partial "image/lazy.html" (dict "Ctx" . "Class" "" "Width" 100 "Height" 100 "Src"
+      "https://sandra.imgix.net/images/silver_moonbeam_medal.png") }}
     </div>
+  </div>
+  <div class="columns">
+    {{ range .Params.reviews }}
+    <div class="column">
+      <div class="content">
+        <blockquote>
+          <i>"{{ .review }}"</i>
+          <div class="is-flex is-justify-content-flex-end">
+            &mdash; {{ .Name }}, &nbsp; {{ .source | markdownify }}
+          </div>
+        </blockquote>
+      </div>
+    </div>
+    {{ end }}
+  </div>
 </section>
 
 {{ end }}
